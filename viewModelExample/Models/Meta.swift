@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol Meta {
+    static func url_get(method:String) -> String
+}

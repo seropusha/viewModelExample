@@ -7,3 +7,7 @@
 //
 
 import Foundation
+import Alamofire
+
+class AlamofireSessionDelegate: SessionDelegate {
+}

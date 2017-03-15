@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+let host = "http:192.168.0.1/"
+
+let token = "someTokenjkbdg8565876dag567dsfasg"
