@@ -26,28 +26,18 @@ class RestAPI {
         return Alamofire.SessionManager(configuration: configuration, delegate: AlamofireSessionDelegate(), serverTrustPolicyManager: trustLolicyManager)
     }()
     
-    static func callResponse<T>(method:HTTPMethod, type:T.Type, params: [String:Any]?, headers:[String:String], success:@escaping(T)->Void) where T:Mappable, T:Meta {
-        
+    static func callResponse<T>(method:HTTPMethod, type:T.Type, parameters: [String:Any]?, headers:[String:String]?, success:@escaping(T)->Void) where T:Mappable, T:Meta {
+        let path = URLPathHelper.buildPath(with: type.url(with: method.rawValue), additional: parameters)
+        let encoding = URLEncoding.default
+        let queue = DispatchQueue(label: "com.exampleViewModel.responseQueue", qos: .utility, attributes: [.concurrent])
+        let sessionManager = RestAPI.shared.sessionManager
+        sessionManager.request(path, method: method, parameters: parameters, encoding: encoding, headers: headers).validate().responseObject(queue: queue, keyPath: nil, context: nil) { (response: DataResponse<T>) in
+            ResponseHelper.parseResponseGetInMain(response: response) { item in
+                success(item)
+            }
+        }
     }
-//    static func callAPIResponse <T:Mappable> (method: HTTPMethod, type:T.Type, params:Dictionary<String, Any>?, headers: Dictionary<String, String>?, success:@escaping (T)->Void)->Void where T:Mappable,T:Meta {
-//        
-//        var paramEncoding: ParameterEncoding = URLEncoding.default
-//        
-//        if method == .get {
-//            paramEncoding = CustomGetEncoding()
-//        } else if method == .post {
-//            paramEncoding = CustomPostEncoding()
-//        }
-//        let fullPath = checkFullUrlPath(currentPath: type.url_get!(method: method.rawValue), params: params)
-//        print(fullPath)
-//        
-//        RestApiClass.sharedInstance.defaultManager.request(fullPath, method:method, parameters: params, encoding: paramEncoding, headers:headers).validate().responseObject(queue: nil, keyPath: nil, context: nil) { (response: DataResponse<T>) in
-//            
-//            proccedResponse(response: response, success: { (result) in
-//                success(result)
-//            })
-//        }
-//    }
+
     
     //MARK: - Private -
     
@@ -58,8 +48,7 @@ class RestAPI {
                 "Content-Type"  : "application/json",
                 "X-Device-Key"  :  udid,
                 "X-Device-Os"   : "iOS",
-                "Authorization" : "bearer"+" "+token
+                "Authorization" : "Bearer"+" "+token
                 ]
     }
-    
 }

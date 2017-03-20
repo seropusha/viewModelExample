@@ -18,6 +18,9 @@
 		16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F711E79E01A00393C23 /* AlamofireSessionDelegate.swift */; };
 		16FE8F761E79E44000393C23 /* EncodingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F751E79E44000393C23 /* EncodingData.swift */; };
 		16FE8F791E79E88100393C23 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F781E79E88100393C23 /* Meta.swift */; };
+		16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F7A1E80676D00393C23 /* URLPathHelper.swift */; };
+		16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F7C1E80784D00393C23 /* ResponseHelper.swift */; };
+		16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F801E807C5900393C23 /* UIViewController+Alert.swift */; };
 		398CC24D10E2DB9D5EDC46C0 /* Pods_viewModelExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470288799A03E405A9FF367C /* Pods_viewModelExampleTests.framework */; };
 		62D763AE8AE5918FC838AE17 /* Pods_viewModelExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60240D5C65C2AE6565947C3 /* Pods_viewModelExample.framework */; };
 		AED8B75CD3701A2D869E6411 /* Pods_viewModelExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AA8968A6B799E9DB1202B /* Pods_viewModelExampleUITests.framework */; };
@@ -59,6 +62,9 @@
 		16FE8F711E79E01A00393C23 /* AlamofireSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSessionDelegate.swift; sourceTree = "<group>"; };
 		16FE8F751E79E44000393C23 /* EncodingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingData.swift; sourceTree = "<group>"; };
 		16FE8F781E79E88100393C23 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		16FE8F7A1E80676D00393C23 /* URLPathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLPathHelper.swift; sourceTree = "<group>"; };
+		16FE8F7C1E80784D00393C23 /* ResponseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHelper.swift; sourceTree = "<group>"; };
+		16FE8F801E807C5900393C23 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		337AA8968A6B799E9DB1202B /* Pods_viewModelExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viewModelExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470288799A03E405A9FF367C /* Pods_viewModelExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viewModelExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E13BB502A2D7BE3CE503357 /* Pods-viewModelExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viewModelExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viewModelExample/Pods-viewModelExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		16FE8F3A1E79D74100393C23 /* viewModelExample */ = {
 			isa = PBXGroup;
 			children = (
+				16FE8F7E1E807C2300393C23 /* Extensions */,
 				16FE8F771E79E86E00393C23 /* Models */,
 				16FE8F691E79D7F500393C23 /* API */,
 				16FE8F6E1E79DB2200393C23 /* SupportingFiles */,
@@ -158,6 +165,8 @@
 				16FE8F6C1E79D9A900393C23 /* ApiMethods.swift */,
 				16FE8F711E79E01A00393C23 /* AlamofireSessionDelegate.swift */,
 				16FE8F751E79E44000393C23 /* EncodingData.swift */,
+				16FE8F7A1E80676D00393C23 /* URLPathHelper.swift */,
+				16FE8F7C1E80784D00393C23 /* ResponseHelper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -176,6 +185,22 @@
 				16FE8F781E79E88100393C23 /* Meta.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		16FE8F7E1E807C2300393C23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16FE8F7F1E807C4600393C23 /* UIViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		16FE8F7F1E807C4600393C23 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16FE8F801E807C5900393C23 /* UIViewController+Alert.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		4D68965D25D2F22BB9D8F5CB /* Frameworks */ = {
@@ -486,7 +511,10 @@
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
 				16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */,
 				16FE8F6B1E79D84A00393C23 /* Rest.swift in Sources */,
+				16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
+				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
+				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,
 				16FE8F701E79DB2F00393C23 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

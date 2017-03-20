@@ -9,6 +9,20 @@
 import Foundation
 import Alamofire
 
+struct Encode {
+    static func encode(with method: HTTPMethod) -> ParameterEncoding {
+        switch method {
+        case .get:
+            return CustomGetEncoding()
+        case .post:
+            return CustomPostEncoding()
+        default:
+            break
+        }
+        return URLEncoding.default
+    }
+}
+
 struct CustomPostEncoding: ParameterEncoding {
     func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         var request = try URLEncoding().encode(urlRequest, with: parameters)
