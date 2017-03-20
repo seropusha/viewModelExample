@@ -38,6 +38,11 @@ class RestAPI {
         }
     }
 
+    func cancelAllDataTasks() {
+        sessionManager.session.getTasksWithCompletionHandler() { dataTasks, uploadTasks, downloadTasks in
+            dataTasks.forEach{ $0.cancel() }
+        }
+    }
     
     //MARK: - Private -
     
