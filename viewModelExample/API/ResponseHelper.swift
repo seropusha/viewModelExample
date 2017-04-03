@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-class ResponseHelper {
+struct ResponseHelper {
     static func parseResponseGetInMain<T: Mappable>(response:DataResponse<T>, success:@escaping (T)->Void) {
         switch response.result {
         case .success(let item):

@@ -9,9 +9,9 @@
 import Foundation
 
 extension RestAPI {
-    func updatedHeaders(with params:[AnyHashable:Any]) -> [AnyHashable:Any] {
+    func updatedHeaders(with params:[String:String]) -> [String:String] {
         let keys = Array(params.keys)
-        var temp = [AnyHashable:Any]()
+        var temp = [String:String]()
         for key in keys {
             guard let value = params[key] else { return [:] }
             temp.updateValue(value, forKey: key)
