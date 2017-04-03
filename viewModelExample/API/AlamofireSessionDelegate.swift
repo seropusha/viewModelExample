@@ -10,4 +10,5 @@ import Foundation
 import Alamofire
 
 class AlamofireSessionDelegate: SessionDelegate {
+    //to do ovveride methods
 }
