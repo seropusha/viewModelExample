@@ -13,15 +13,14 @@ class VKToken: BaseModel {
 }
 
 extension VKToken: Meta {
-    static func url(with method:HTTPMethod) -> String {
+    static func url(with method:Method) -> String {
         switch method {
-        case .get:
+        case .GET:
             return authVKURLString()
-        default:
-            assert(false, "empty url string")
-            break
+        case .POST:
+            assert(false, "POST url string is empty")
+            return ""
         }
-        return ""
     }
     
     private static func authVKURLString() -> String {
