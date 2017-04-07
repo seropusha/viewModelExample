@@ -7,6 +7,7 @@ target 'viewModelExample' do
 
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
+    pod 'KeychainSwift', '~> 7.0'
 
   target 'viewModelExampleTests' do
     inherit! :search_paths

@@ -13,6 +13,9 @@ class BaseModel: Mappable {
     
     public var modelID = ""
     
+    init() {
+    }
+    
     public required init?(map: Map) {
     }
     

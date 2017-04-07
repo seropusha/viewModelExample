@@ -27,7 +27,7 @@ struct RestAPI {
     //MARK: - Public -
     
     func callResponse<T>(method:Method, type:T.Type, parameters: [String:Any]?, headers:[String:String]?, success:@escaping(T)->Void) where T:Mappable, T:Meta {
-        let path = URLPathHelper.buildPath(with: type.url(with: method), additional: parameters)
+        let path = URLPathHelper.buildPath(with: type.urlString(with: method), additional: parameters)
         let encoding = URLEncoding.default
         let headers = self.updateHeaders(with: headers)
         let queue = DispatchQueue(label: "com.exampleViewModel.responseQueue", qos: .utility, attributes: [.concurrent])

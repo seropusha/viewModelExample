@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Meta {
-    static func url(with method:Method) -> String
+    static func urlString(with method:Method) -> String
 }

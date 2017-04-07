@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1681F7041E98228900470D96 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F7031E98228900470D96 /* LaunchViewController.swift */; };
+		1681F7081E98235600470D96 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F7071E98235600470D96 /* UserService.swift */; };
+		1681F70B1E9824E600470D96 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F70A1E9824E600470D96 /* DataService.swift */; };
 		16E5238A1E92BF3A004B1447 /* RestAPI+Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */; };
 		16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5238B1E92C8E7004B1447 /* APIOperation.swift */; };
 		16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5238F1E92CBDD004B1447 /* ViewModel.swift */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		01C23851785E2385C6951FC6 /* Pods-viewModelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viewModelExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-viewModelExample/Pods-viewModelExample.release.xcconfig"; sourceTree = "<group>"; };
+		1681F7031E98228900470D96 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		1681F7071E98235600470D96 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1681F70A1E9824E600470D96 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RestAPI+Headers.swift"; sourceTree = "<group>"; };
 		16E5238B1E92C8E7004B1447 /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
 		16E5238F1E92CBDD004B1447 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -117,6 +123,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166D33E01E983649008DBEEC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1681F7011E9821D900470D96 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				16E5239C1E98135B004B1447 /* viewModel */,
+				16E523931E980903004B1447 /* AuthorizationViewController.swift */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
+		1681F7021E98222300470D96 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1681F7031E98228900470D96 /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		1681F7051E98233800470D96 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1681F7091E9824DC00470D96 /* DataService */,
+				1681F7061E98234D00470D96 /* UserService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1681F7061E98234D00470D96 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				1681F7071E98235600470D96 /* UserService.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		1681F7091E9824DC00470D96 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				1681F70A1E9824E600470D96 /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		16E523881E92BF2C004B1447 /* RestAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +180,12 @@
 			path = RestAPI;
 			sourceTree = "<group>";
 		};
-		16E5238D1E92CBA1004B1447 /* BaseClasses */ = {
+		16E5238D1E92CBA1004B1447 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				16E5238E1E92CBD2004B1447 /* ViewModel */,
 			);
-			path = BaseClasses;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		16E5238E1E92CBD2004B1447 /* ViewModel */ = {
@@ -144,8 +199,8 @@
 		16E523921E9808AE004B1447 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				16E5239C1E98135B004B1447 /* viewModel */,
-				16E523931E980903004B1447 /* AuthorizationViewController.swift */,
+				1681F7021E98222300470D96 /* Launch */,
+				1681F7011E9821D900470D96 /* Authorization */,
 			);
 			name = Controllers;
 			path = Controllers/Authorization;
@@ -184,8 +239,10 @@
 		16FE8F3A1E79D74100393C23 /* viewModelExample */ = {
 			isa = PBXGroup;
 			children = (
+				166D33E01E983649008DBEEC /* Router */,
+				1681F7051E98233800470D96 /* Services */,
 				16E523921E9808AE004B1447 /* Controllers */,
-				16E5238D1E92CBA1004B1447 /* BaseClasses */,
+				16E5238D1E92CBA1004B1447 /* Classes */,
 				16FE8F7E1E807C2300393C23 /* Extensions */,
 				16FE8F771E79E86E00393C23 /* Models */,
 				16FE8F691E79D7F500393C23 /* API */,
@@ -575,16 +632,19 @@
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
 				16E523981E980A15004B1447 /* BaseModel.swift in Sources */,
+				1681F7041E98228900470D96 /* LaunchViewController.swift in Sources */,
 				16E523961E98096A004B1447 /* VKToken.swift in Sources */,
 				16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */,
 				16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */,
 				16E5239E1E98136A004B1447 /* AuthorizationViewModel.swift in Sources */,
 				16FE8F6B1E79D84A00393C23 /* RestAPI.swift in Sources */,
+				1681F7081E98235600470D96 /* UserService.swift in Sources */,
 				16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,
 				16FE8F701E79DB2F00393C23 /* Constants.swift in Sources */,
+				1681F70B1E9824E600470D96 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
