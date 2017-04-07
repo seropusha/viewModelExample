@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1681F7041E98228900470D96 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F7031E98228900470D96 /* LaunchViewController.swift */; };
+		166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E21E9837A9008DBEEC /* RouterProtocol.swift */; };
+		166D33E51E98380F008DBEEC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E41E98380F008DBEEC /* Router.swift */; };
+		166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E61E983936008DBEEC /* LoginRouter.swift */; };
 		1681F7081E98235600470D96 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F7071E98235600470D96 /* UserService.swift */; };
 		1681F70B1E9824E600470D96 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F70A1E9824E600470D96 /* DataService.swift */; };
 		16E5238A1E92BF3A004B1447 /* RestAPI+Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */; };
@@ -55,7 +57,9 @@
 
 /* Begin PBXFileReference section */
 		01C23851785E2385C6951FC6 /* Pods-viewModelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viewModelExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-viewModelExample/Pods-viewModelExample.release.xcconfig"; sourceTree = "<group>"; };
-		1681F7031E98228900470D96 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		166D33E21E9837A9008DBEEC /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		166D33E41E98380F008DBEEC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		166D33E61E983936008DBEEC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		1681F7071E98235600470D96 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1681F70A1E9824E600470D96 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RestAPI+Headers.swift"; sourceTree = "<group>"; };
@@ -126,8 +130,19 @@
 		166D33E01E983649008DBEEC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				166D33E11E98379B008DBEEC /* RouterProtocol */,
+				166D33E41E98380F008DBEEC /* Router.swift */,
+				166D33E61E983936008DBEEC /* LoginRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		166D33E11E98379B008DBEEC /* RouterProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				166D33E21E9837A9008DBEEC /* RouterProtocol.swift */,
+			);
+			path = RouterProtocol;
 			sourceTree = "<group>";
 		};
 		1681F7011E9821D900470D96 /* Authorization */ = {
@@ -137,14 +152,6 @@
 				16E523931E980903004B1447 /* AuthorizationViewController.swift */,
 			);
 			name = Authorization;
-			sourceTree = "<group>";
-		};
-		1681F7021E98222300470D96 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				1681F7031E98228900470D96 /* LaunchViewController.swift */,
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		1681F7051E98233800470D96 /* Services */ = {
@@ -199,7 +206,6 @@
 		16E523921E9808AE004B1447 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1681F7021E98222300470D96 /* Launch */,
 				1681F7011E9821D900470D96 /* Authorization */,
 			);
 			name = Controllers;
@@ -625,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166D33E51E98380F008DBEEC /* Router.swift in Sources */,
 				16E523941E980903004B1447 /* AuthorizationViewController.swift in Sources */,
 				16FE8F761E79E44000393C23 /* EncodingData.swift in Sources */,
 				16FE8F6D1E79D9A900393C23 /* ApiMethods.swift in Sources */,
@@ -632,7 +639,7 @@
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
 				16E523981E980A15004B1447 /* BaseModel.swift in Sources */,
-				1681F7041E98228900470D96 /* LaunchViewController.swift in Sources */,
+				166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */,
 				16E523961E98096A004B1447 /* VKToken.swift in Sources */,
 				16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */,
 				16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */,
@@ -640,6 +647,7 @@
 				16FE8F6B1E79D84A00393C23 /* RestAPI.swift in Sources */,
 				1681F7081E98235600470D96 /* UserService.swift in Sources */,
 				16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */,
+				166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,

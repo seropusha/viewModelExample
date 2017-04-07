@@ -12,7 +12,7 @@ private let accessTokenKey = "access_token"
 private let expiresInKey = "expires_in"
 private let user_id      = "user_id"
 
-class VKToken: BaseModel {
+struct VKToken {
     
     var token = ""
     var expiresIn: Date!
@@ -27,7 +27,7 @@ class VKToken: BaseModel {
         guard let URLString = request.url?.absoluteString else { return nil }
         guard let paramsString = URLString.components(separatedBy: "#").last else { return nil }
         let params = paramsString.components(separatedBy: "&")
-        let tokenObject = VKToken()
+        var tokenObject = VKToken()
         for string in params {
             if string.contains(accessTokenKey) {
                 tokenObject.token = string.components(separatedBy: "=").last ?? ""
