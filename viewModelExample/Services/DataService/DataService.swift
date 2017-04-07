@@ -9,23 +9,27 @@
 import Foundation
 import KeychainSwift
 
-private let authTokenKey = "authToken"
+private let authTokenDataKey = "authTokenData"
 
 struct DataService {
     
     //MARK: - Auth token -
     
-    static func authToken() -> String? {
+    static func authToken() -> VKToken? {
         let keychain = KeychainSwift()
-        return keychain.get(authTokenKey)
+        if let data = keychain.getData(authTokenDataKey){
+            return NSKeyedUnarchiver.unarchiveObject(with: data) as? VKToken
+        }
+        return nil
     }
     
-    static func setAuth(token: String?) {
+    static func setAuth(token: VKToken?) {
         let keychain = KeychainSwift()
         if let tkn = token {
-            keychain.set(tkn, forKey: authTokenKey)
+            let data = NSKeyedArchiver.archivedData(withRootObject: tkn)
+            keychain.set(data, forKey: authTokenDataKey)
         } else {
-            keychain.delete(authTokenKey)
+            keychain.delete(authTokenDataKey)
         }
     }
 }
