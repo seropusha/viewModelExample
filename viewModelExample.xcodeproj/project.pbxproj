@@ -12,7 +12,9 @@
 		166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E61E983936008DBEEC /* LoginRouter.swift */; };
 		166D33ED1E9B9BBB008DBEEC /* UIApplication+FrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33EC1E9B9BBB008DBEEC /* UIApplication+FrontViewController.swift */; };
 		166D33EF1E9B9E45008DBEEC /* LaunchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33EE1E9B9E45008DBEEC /* LaunchClass.swift */; };
+		166D33F41E9BA402008DBEEC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33F31E9BA402008DBEEC /* BaseViewController.swift */; };
 		1681F7081E98235600470D96 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681F7071E98235600470D96 /* UserService.swift */; };
+		16C1EEAD1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1EEAC1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift */; };
 		16E5238A1E92BF3A004B1447 /* RestAPI+Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */; };
 		16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5238B1E92C8E7004B1447 /* APIOperation.swift */; };
 		16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5238F1E92CBDD004B1447 /* ViewModel.swift */; };
@@ -63,7 +65,9 @@
 		166D33E61E983936008DBEEC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		166D33EC1E9B9BBB008DBEEC /* UIApplication+FrontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+FrontViewController.swift"; sourceTree = "<group>"; };
 		166D33EE1E9B9E45008DBEEC /* LaunchClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchClass.swift; sourceTree = "<group>"; };
+		166D33F31E9BA402008DBEEC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1681F7071E98235600470D96 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		16C1EEAC1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+AccessToken.swift"; sourceTree = "<group>"; };
 		16E523891E92BF3A004B1447 /* RestAPI+Headers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RestAPI+Headers.swift"; sourceTree = "<group>"; };
 		16E5238B1E92C8E7004B1447 /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
 		16E5238F1E92CBDD004B1447 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
+		166D33F01E9BA37E008DBEEC /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				166D33F31E9BA402008DBEEC /* BaseViewController.swift */,
+			);
+			name = BaseViewController;
+			path = ../BaseViewController;
+			sourceTree = "<group>";
+		};
 		1681F7011E9821D900470D96 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,14 @@
 				1681F7071E98235600470D96 /* UserService.swift */,
 			);
 			path = UserService;
+			sourceTree = "<group>";
+		};
+		16C1EEAB1E9BB0CD00AD0672 /* URLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				16C1EEAC1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift */,
+			);
+			path = URLRequest;
 			sourceTree = "<group>";
 		};
 		16E523881E92BF2C004B1447 /* RestAPI */ = {
@@ -216,6 +237,7 @@
 		16E523921E9808AE004B1447 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				166D33F01E9BA37E008DBEEC /* BaseViewController */,
 				1681F7011E9821D900470D96 /* Authorization */,
 			);
 			name = Controllers;
@@ -324,6 +346,7 @@
 		16FE8F7E1E807C2300393C23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				16C1EEAB1E9BB0CD00AD0672 /* URLRequest */,
 				166D33EB1E9B9BA3008DBEEC /* UIApplication */,
 				16E523881E92BF2C004B1447 /* RestAPI */,
 				16FE8F7F1E807C4600393C23 /* UIViewController */,
@@ -647,6 +670,7 @@
 				16FE8F761E79E44000393C23 /* EncodingData.swift in Sources */,
 				16FE8F6D1E79D9A900393C23 /* ApiMethods.swift in Sources */,
 				16E5238A1E92BF3A004B1447 /* RestAPI+Headers.swift in Sources */,
+				166D33F41E9BA402008DBEEC /* BaseViewController.swift in Sources */,
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
 				166D33ED1E9B9BBB008DBEEC /* UIApplication+FrontViewController.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
@@ -661,6 +685,7 @@
 				16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */,
 				166D33EF1E9B9E45008DBEEC /* LaunchClass.swift in Sources */,
 				166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */,
+				16C1EEAD1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,

@@ -27,8 +27,9 @@ class LaunchClass {
     }
     
     func setupStartScreen() {
-        if UsersService.alreadyLogged() {
-            //show other screens
+        if UsersService.isHaveActiveToken() {
+            //setup screen
+            window?.rootViewController = UINavigationController()
         }else{
             setupLoginRouterAndPresentVC()
         }

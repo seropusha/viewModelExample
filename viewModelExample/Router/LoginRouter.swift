@@ -19,6 +19,6 @@ struct LoginRouter: RouterProtocol {
     
     func presentAuthorizationVC(_ animation: Bool = true) {
         let authVC = AuthorizationViewController()
-        push(authVC, animated: animation)
+        present(authVC, animated: true, completion: nil)
     }
 }

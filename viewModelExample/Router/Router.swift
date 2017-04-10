@@ -12,4 +12,14 @@ struct Router: RouterProtocol {
     
     weak var navigationController: UINavigationController?
     
+    var login: LoginRouter!
+    
+    init() {}
+    
+    init!(navigationController: UINavigationController?) {
+        guard let NC = navigationController else { return nil }
+        self.navigationController = NC
+        login = LoginRouter(with: NC)
+    }
 }
+

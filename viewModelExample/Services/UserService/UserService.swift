@@ -12,11 +12,13 @@ import KeychainSwift
 private let authTokenDataKey = "authTokenKeychain"
 
 struct UsersService {
-    //static var token = VKToken()
     //static var currentUser  = User()
     
-    static func alreadyLogged() -> Bool {
-        return authToken() != nil
+    static func isHaveActiveToken() -> Bool {
+        guard let token = authToken(), token.expiresIn.compare(Date()) == .orderedAscending else {
+            return false
+        }
+        return true
     }
     
     static func authToken() -> VKToken? {
