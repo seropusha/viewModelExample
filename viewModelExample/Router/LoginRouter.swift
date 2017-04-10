@@ -8,6 +8,17 @@
 
 import UIKit
 
-struct LoginRouter {
-    //to do
+struct LoginRouter: RouterProtocol {
+
+    weak var navigationController: UINavigationController?
+    init() {}
+    
+    init(with navigationController: UINavigationController?) {
+        self.navigationController = navigationController
+    }
+    
+    func presentAuthorizationVC(_ animation: Bool = true) {
+        let authVC = AuthorizationViewController()
+        push(authVC, animated: animation)
+    }
 }

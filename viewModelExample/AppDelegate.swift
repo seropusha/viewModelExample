@@ -15,10 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.rootViewController = AuthorizationViewController()
-        window?.makeKeyAndVisible()
-        return true
+
+        return LaunchClass.shared.application(didFinishLaunchingWithOptions: launchOptions, window: application.windows.first)
     }
 }
 
