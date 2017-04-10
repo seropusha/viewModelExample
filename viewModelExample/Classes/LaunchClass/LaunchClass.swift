@@ -17,12 +17,10 @@ class LaunchClass {
     }()
     
     func application(didFinishLaunchingWithOptions launchOptions: [AnyHashable: Any]?, window: UIWindow?) -> Bool {
-        
         self.window = window ?? UIWindow()
         self.window?.makeKeyAndVisible()
         
         setupStartScreen()
-        
         return true
     }
     

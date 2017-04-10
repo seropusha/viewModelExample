@@ -69,7 +69,7 @@ struct HTTPHeaders {
             "Content-Type"  : "application/json",
             "X-Device-Key"  :  udid,
             "X-Device-Os"   : "iOS",
-            "Authorization" : "Bearer"+" "+token
+            //"Authorization" : "Bearer"+" "+token
         ]
     }
 }

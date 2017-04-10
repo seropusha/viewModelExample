@@ -8,12 +8,11 @@
 
 import Foundation
 
-let host = "https://vk.com/"
+let host = "https://api.vk.com/method"
 
-let token = "" //NEED REMOVEAND SAVE IN KAY CHAIN
 let VKAppID      = "5005882"
 let APIRedirectURI = "https://oauth.vk.com/blank.html"
-let VKAPIVersion = "5.52"
+let VKAPIVersion = "5.63"
 
 enum URLParameterKey: String {
     case additionalPath = "additionalUrlPath"
