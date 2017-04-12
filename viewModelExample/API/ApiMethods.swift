@@ -10,7 +10,5 @@ import Foundation
 
 public enum APIMethod: String {
     
-    case register       = "/register"
-    case forgotPassword = "/forgot-password"
-    case login          = "/login"
+    case dialogs  = "/messages.getDialogs"
 }

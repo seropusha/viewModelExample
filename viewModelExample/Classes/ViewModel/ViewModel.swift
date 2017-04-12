@@ -14,6 +14,7 @@ protocol ViewModelDelegate: class {
 }
 
 class ViewModel {
+    
     weak var delegate: ViewModelDelegate? {
         didSet { delegate?.viewModelDidStartUpdate() }
     }

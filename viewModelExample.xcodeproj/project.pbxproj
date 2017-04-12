@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1633DD3A1E9E9D62009321D8 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD391E9E9D62009321D8 /* DialogsViewController.swift */; };
+		1633DD3C1E9E9D86009321D8 /* DialogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD3B1E9E9D86009321D8 /* DialogsViewModel.swift */; };
+		1633DD421E9E9EFD009321D8 /* BaseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */; };
+		1633DD431E9E9EFD009321D8 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD411E9E9EFD009321D8 /* BaseModel.swift */; };
+		1633DD461E9EA678009321D8 /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD451E9EA678009321D8 /* Dialogs.swift */; };
+		1633DD481E9EA73D009321D8 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD471E9EA73D009321D8 /* Dialog.swift */; };
+		1633DD4B1E9EA7EE009321D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD4A1E9EA7EE009321D8 /* Message.swift */; };
+		1633DD4E1E9EAA71009321D8 /* BaseModel+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */; };
 		166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E21E9837A9008DBEEC /* RouterProtocol.swift */; };
 		166D33E51E98380F008DBEEC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E41E98380F008DBEEC /* Router.swift */; };
 		166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E61E983936008DBEEC /* LoginRouter.swift */; };
@@ -20,7 +28,6 @@
 		16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5238F1E92CBDD004B1447 /* ViewModel.swift */; };
 		16E523941E980903004B1447 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523931E980903004B1447 /* AuthorizationViewController.swift */; };
 		16E523961E98096A004B1447 /* VKToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523951E98096A004B1447 /* VKToken.swift */; };
-		16E523981E980A15004B1447 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E523971E980A15004B1447 /* BaseModel.swift */; };
 		16E5239E1E98136A004B1447 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E5239D1E98136A004B1447 /* AuthorizationViewModel.swift */; };
 		16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE8F3B1E79D74100393C23 /* AppDelegate.swift */; };
 		16FE8F431E79D74100393C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FE8F421E79D74100393C23 /* Assets.xcassets */; };
@@ -60,6 +67,14 @@
 
 /* Begin PBXFileReference section */
 		01C23851785E2385C6951FC6 /* Pods-viewModelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viewModelExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-viewModelExample/Pods-viewModelExample.release.xcconfig"; sourceTree = "<group>"; };
+		1633DD391E9E9D62009321D8 /* DialogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
+		1633DD3B1E9E9D86009321D8 /* DialogsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsViewModel.swift; sourceTree = "<group>"; };
+		1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseArrayModel.swift; sourceTree = "<group>"; };
+		1633DD411E9E9EFD009321D8 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		1633DD451E9EA678009321D8 /* Dialogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
+		1633DD471E9EA73D009321D8 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		1633DD4A1E9EA7EE009321D8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseModel+Date.swift"; sourceTree = "<group>"; };
 		166D33E21E9837A9008DBEEC /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		166D33E41E98380F008DBEEC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		166D33E61E983936008DBEEC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -73,7 +88,6 @@
 		16E5238F1E92CBDD004B1447 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		16E523931E980903004B1447 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		16E523951E98096A004B1447 /* VKToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKToken.swift; sourceTree = "<group>"; };
-		16E523971E980A15004B1447 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		16E5239D1E98136A004B1447 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		16FE8F381E79D74100393C23 /* viewModelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viewModelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FE8F3B1E79D74100393C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +147,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1633DD381E9E9D53009321D8 /* DialogsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD391E9E9D62009321D8 /* DialogsViewController.swift */,
+				1633DD3B1E9E9D86009321D8 /* DialogsViewModel.swift */,
+			);
+			path = DialogsViewController;
+			sourceTree = "<group>";
+		};
+		1633DD3F1E9E9EFD009321D8 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */,
+				1633DD411E9E9EFD009321D8 /* BaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		1633DD441E9EA66D009321D8 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD451E9EA678009321D8 /* Dialogs.swift */,
+				1633DD471E9EA73D009321D8 /* Dialog.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		1633DD491E9EA7DF009321D8 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD4A1E9EA7EE009321D8 /* Message.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		1633DD4C1E9EAA62009321D8 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		166D33E01E983649008DBEEC /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +294,7 @@
 		16E523921E9808AE004B1447 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1633DD381E9E9D53009321D8 /* DialogsViewController */,
 				166D33F01E9BA37E008DBEEC /* BaseViewController */,
 				1681F7011E9821D900470D96 /* Authorization */,
 			);
@@ -336,9 +394,11 @@
 		16FE8F771E79E86E00393C23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1633DD491E9EA7DF009321D8 /* Messages */,
+				1633DD441E9EA66D009321D8 /* Dialogs */,
+				1633DD3F1E9E9EFD009321D8 /* BaseModel */,
 				16FE8F781E79E88100393C23 /* Meta.swift */,
 				16E523951E98096A004B1447 /* VKToken.swift */,
-				16E523971E980A15004B1447 /* BaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +406,7 @@
 		16FE8F7E1E807C2300393C23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1633DD4C1E9EAA62009321D8 /* BaseModel */,
 				16C1EEAB1E9BB0CD00AD0672 /* URLRequest */,
 				166D33EB1E9B9BA3008DBEEC /* UIApplication */,
 				16E523881E92BF2C004B1447 /* RestAPI */,
@@ -462,7 +523,7 @@
 				TargetAttributes = {
 					16FE8F371E79D74100393C23 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					16FE8F4B1E79D74100393C23 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -667,28 +728,35 @@
 			files = (
 				166D33E51E98380F008DBEEC /* Router.swift in Sources */,
 				16E523941E980903004B1447 /* AuthorizationViewController.swift in Sources */,
+				1633DD431E9E9EFD009321D8 /* BaseModel.swift in Sources */,
 				16FE8F761E79E44000393C23 /* EncodingData.swift in Sources */,
+				1633DD4E1E9EAA71009321D8 /* BaseModel+Date.swift in Sources */,
 				16FE8F6D1E79D9A900393C23 /* ApiMethods.swift in Sources */,
 				16E5238A1E92BF3A004B1447 /* RestAPI+Headers.swift in Sources */,
 				166D33F41E9BA402008DBEEC /* BaseViewController.swift in Sources */,
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
+				1633DD3C1E9E9D86009321D8 /* DialogsViewModel.swift in Sources */,
 				166D33ED1E9B9BBB008DBEEC /* UIApplication+TopViewController.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
-				16E523981E980A15004B1447 /* BaseModel.swift in Sources */,
 				166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */,
 				16E523961E98096A004B1447 /* VKToken.swift in Sources */,
 				16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */,
 				16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */,
 				16E5239E1E98136A004B1447 /* AuthorizationViewModel.swift in Sources */,
+				1633DD461E9EA678009321D8 /* Dialogs.swift in Sources */,
 				16FE8F6B1E79D84A00393C23 /* RestAPI.swift in Sources */,
+				1633DD3A1E9E9D62009321D8 /* DialogsViewController.swift in Sources */,
 				1681F7081E98235600470D96 /* UserService.swift in Sources */,
+				1633DD4B1E9EA7EE009321D8 /* Message.swift in Sources */,
 				16FE8F811E807C5900393C23 /* UIViewController+Alert.swift in Sources */,
+				1633DD481E9EA73D009321D8 /* Dialog.swift in Sources */,
 				166D33EF1E9B9E45008DBEEC /* LaunchClass.swift in Sources */,
 				166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */,
 				16C1EEAD1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,
+				1633DD421E9E9EFD009321D8 /* BaseArrayModel.swift in Sources */,
 				16FE8F701E79DB2F00393C23 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,11 +902,13 @@
 			baseConfigurationReference = 6E13BB502A2D7BE3CE503357 /* Pods-viewModelExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = viewModelExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LenoxLewis.ViewModelExample.viewModelExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -847,11 +917,13 @@
 			baseConfigurationReference = 01C23851785E2385C6951FC6 /* Pods-viewModelExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = viewModelExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LenoxLewis.ViewModelExample.viewModelExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
