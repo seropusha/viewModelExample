@@ -15,6 +15,9 @@
 		1633DD481E9EA73D009321D8 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD471E9EA73D009321D8 /* Dialog.swift */; };
 		1633DD4B1E9EA7EE009321D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD4A1E9EA7EE009321D8 /* Message.swift */; };
 		1633DD4E1E9EAA71009321D8 /* BaseModel+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */; };
+		1633DD661E9ECB16009321D8 /* ParametersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD651E9ECB16009321D8 /* ParametersBuilder.swift */; };
+		1633DD681E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD671E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift */; };
+		1633DD6B1E9ECC29009321D8 /* DialogsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */; };
 		166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E21E9837A9008DBEEC /* RouterProtocol.swift */; };
 		166D33E51E98380F008DBEEC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E41E98380F008DBEEC /* Router.swift */; };
 		166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E61E983936008DBEEC /* LoginRouter.swift */; };
@@ -75,6 +78,9 @@
 		1633DD471E9EA73D009321D8 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		1633DD4A1E9EA7EE009321D8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseModel+Date.swift"; sourceTree = "<group>"; };
+		1633DD651E9ECB16009321D8 /* ParametersBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersBuilder.swift; sourceTree = "<group>"; };
+		1633DD671E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsConfigurator.swift; sourceTree = "<group>"; };
 		166D33E21E9837A9008DBEEC /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		166D33E41E98380F008DBEEC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		166D33E61E983936008DBEEC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -188,6 +194,31 @@
 				1633DD4D1E9EAA71009321D8 /* BaseModel+Date.swift */,
 			);
 			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		1633DD631E9ECB06009321D8 /* ParametersBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD651E9ECB16009321D8 /* ParametersBuilder.swift */,
+			);
+			path = ParametersBuilder;
+			sourceTree = "<group>";
+		};
+		1633DD641E9ECB06009321D8 /* ParameterConfigurators */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD691E9ECC1A009321D8 /* DialogsConfigurator */,
+				1633DD671E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift */,
+			);
+			path = ParameterConfigurators;
+			sourceTree = "<group>";
+		};
+		1633DD691E9ECC1A009321D8 /* DialogsConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */,
+			);
+			path = DialogsConfigurator;
 			sourceTree = "<group>";
 		};
 		166D33E01E983649008DBEEC /* Router */ = {
@@ -372,6 +403,8 @@
 		16FE8F691E79D7F500393C23 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1633DD631E9ECB06009321D8 /* ParametersBuilder */,
+				1633DD641E9ECB06009321D8 /* ParameterConfigurators */,
 				16FE8F6A1E79D84A00393C23 /* RestAPI.swift */,
 				16FE8F6C1E79D9A900393C23 /* ApiMethods.swift */,
 				16FE8F711E79E01A00393C23 /* AlamofireSessionDelegate.swift */,
@@ -736,12 +769,14 @@
 				166D33F41E9BA402008DBEEC /* BaseViewController.swift in Sources */,
 				16FE8F721E79E01A00393C23 /* AlamofireSessionDelegate.swift in Sources */,
 				1633DD3C1E9E9D86009321D8 /* DialogsViewModel.swift in Sources */,
+				1633DD6B1E9ECC29009321D8 /* DialogsConfigurator.swift in Sources */,
 				166D33ED1E9B9BBB008DBEEC /* UIApplication+TopViewController.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
 				166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */,
 				16E523961E98096A004B1447 /* VKToken.swift in Sources */,
 				16FE8F3C1E79D74100393C23 /* AppDelegate.swift in Sources */,
 				16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */,
+				1633DD681E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift in Sources */,
 				16E5239E1E98136A004B1447 /* AuthorizationViewModel.swift in Sources */,
 				1633DD461E9EA678009321D8 /* Dialogs.swift in Sources */,
 				16FE8F6B1E79D84A00393C23 /* RestAPI.swift in Sources */,
@@ -755,6 +790,7 @@
 				16C1EEAD1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
+				1633DD661E9ECB16009321D8 /* ParametersBuilder.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,
 				1633DD421E9E9EFD009321D8 /* BaseArrayModel.swift in Sources */,
 				16FE8F701E79DB2F00393C23 /* Constants.swift in Sources */,
