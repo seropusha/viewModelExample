@@ -16,8 +16,8 @@ class Dialog: BaseModel {
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        inRead  <- map["in_read"]
-        outRead <- map["out_read"]
-        message <- map["message"]
+        inRead  <- map[JSONInRead]
+        outRead <- map[JSONOutRead]
+        message <- map[JSONMessage]
     }
 }

@@ -21,13 +21,13 @@ class Message: BaseModel {
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        date = dateFrom(map, key: "date")
-        timestamp <- map["date"]
-        isOut     <- map["out"]
-        userID    <- map["user_id"]
-        isRead    <- map["read_state"]
-        title     <- map["title"]
-        body      <- map["body"]
-        randomID  <- map["random_id"]
+        date = dateFrom(map, key: JSONDate)
+        timestamp <- map[JSONDate]
+        isOut     <- map[JSONOut]
+        userID    <- map[JSONUserId]
+        isRead    <- map[JSONReadState]
+        title     <- map[JSONTitle]
+        body      <- map[JSONBody]
+        randomID  <- map[JSONRandomId]
     }
 }

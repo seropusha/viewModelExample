@@ -15,6 +15,6 @@ class BaseArrayModel: BaseModel {
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        countItems  <- map["count"]
+        countItems  <- map[JSONCount]
     }
 }

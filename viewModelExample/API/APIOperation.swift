@@ -20,6 +20,7 @@ protocol APIOperation {
 }
 
 extension APIOperation where Self : ViewModel {
+    
     func APICall<T>(method: Method, type:T.Type, params:[String:Any]?, headers:[String:String]?) where T:Mappable,T:Meta {
         let API = RestAPI()
         API.callResponse(method: method, type: type, parameters: params, headers: headers) { genericObject in

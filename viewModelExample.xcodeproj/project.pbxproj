@@ -18,6 +18,7 @@
 		1633DD661E9ECB16009321D8 /* ParametersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD651E9ECB16009321D8 /* ParametersBuilder.swift */; };
 		1633DD681E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD671E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift */; };
 		1633DD6B1E9ECC29009321D8 /* DialogsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */; };
+		1633DD701E9FF85B009321D8 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD6F1E9FF85B009321D8 /* JSONKeys.swift */; };
 		166D33E31E9837A9008DBEEC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E21E9837A9008DBEEC /* RouterProtocol.swift */; };
 		166D33E51E98380F008DBEEC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E41E98380F008DBEEC /* Router.swift */; };
 		166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D33E61E983936008DBEEC /* LoginRouter.swift */; };
@@ -81,6 +82,7 @@
 		1633DD651E9ECB16009321D8 /* ParametersBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersBuilder.swift; sourceTree = "<group>"; };
 		1633DD671E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsConfigurator.swift; sourceTree = "<group>"; };
+		1633DD6F1E9FF85B009321D8 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
 		166D33E21E9837A9008DBEEC /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		166D33E41E98380F008DBEEC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		166D33E61E983936008DBEEC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -219,6 +221,14 @@
 				1633DD6A1E9ECC29009321D8 /* DialogsConfigurator.swift */,
 			);
 			path = DialogsConfigurator;
+			sourceTree = "<group>";
+		};
+		1633DD6E1E9FF757009321D8 /* JSONKeys */ = {
+			isa = PBXGroup;
+			children = (
+				1633DD6F1E9FF85B009321D8 /* JSONKeys.swift */,
+			);
+			path = JSONKeys;
 			sourceTree = "<group>";
 		};
 		166D33E01E983649008DBEEC /* Router */ = {
@@ -403,6 +413,7 @@
 		16FE8F691E79D7F500393C23 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1633DD6E1E9FF757009321D8 /* JSONKeys */,
 				1633DD631E9ECB06009321D8 /* ParametersBuilder */,
 				1633DD641E9ECB06009321D8 /* ParameterConfigurators */,
 				16FE8F6A1E79D84A00393C23 /* RestAPI.swift */,
@@ -778,6 +789,7 @@
 				16E523901E92CBDD004B1447 /* ViewModel.swift in Sources */,
 				1633DD681E9ECB4E009321D8 /* ParameterConfiguratorProtocol.swift in Sources */,
 				16E5239E1E98136A004B1447 /* AuthorizationViewModel.swift in Sources */,
+				1633DD701E9FF85B009321D8 /* JSONKeys.swift in Sources */,
 				1633DD461E9EA678009321D8 /* Dialogs.swift in Sources */,
 				16FE8F6B1E79D84A00393C23 /* RestAPI.swift in Sources */,
 				1633DD3A1E9E9D62009321D8 /* DialogsViewController.swift in Sources */,

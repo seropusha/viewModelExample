@@ -18,8 +18,8 @@ class ErrorRequestParams: Mappable {
     }
     
     func mapping(map: Map) {
-        key   <- map["key"]
-        value <- map["value"]
+        key   <- map[JSONKey]
+        value <- map[JSONValue]
     }
 }
 
@@ -34,9 +34,9 @@ class ErrorResult: Mappable {
     }
     
     func mapping(map: Map) {
-        code    <- map["error_code"]
-        message <- map["error_msg"]
-        params  <- map["request_params"]
+        code    <- map[JSONErrorCode]
+        message <- map[JSONErrorMessage]
+        params  <- map[JSONRequestParams]
     }
 }
 
@@ -54,8 +54,8 @@ class BaseModel: Mappable {
     }
     
     public func mapping(map: Map) {
-        modelID  <- map["id"]
-        error    <- map["error"]
+        modelID  <- map[JSONid]
+        error    <- map[JSONError]
     }
 }
 
