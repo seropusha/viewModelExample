@@ -15,7 +15,8 @@ class Dialogs: BaseArrayModel {
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        dialogs  <- map[JSONResponse]
+        dialogs  <- map[JSONItems]
+        print(dialogs.count)
     }
 }
 
@@ -23,7 +24,8 @@ extension Dialogs: Meta {
     static func urlString(with method:Method) -> String {
         switch method {
         case .POST:
-            return "" //host+APIMethod.dialogs.rawValue
+            var urlBuilder = URLBuilder(host: .main, method: .dialogs)
+            return urlBuilder.build().absoluteString
         default:
             assert(false, "diclare \(method.rawValue) in Dialogs")
             return ""

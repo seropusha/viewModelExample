@@ -52,7 +52,6 @@ extension VKToken: Meta {
         urlBuilder.add(redirectUri: APIRedirectURI)
         urlBuilder.add(scope: perrmissionsResult)
         urlBuilder.add(responseType: "token")
-        urlBuilder.add(APIVersion: VKAPIVersion)
         return urlBuilder.build().absoluteString
     }
 }

@@ -16,8 +16,10 @@ struct URLBuilder {
     
     private var urlString = ""
     private var isFirstParameter = true
+    private let host: APIHost
     
     init(host: APIHost, method: APIMethod) {
+        self.host = host
         switch host {
         case .main:
             urlString += host.rawValue
@@ -29,7 +31,8 @@ struct URLBuilder {
         }
     }
     
-    func build() -> URL {
+    mutating func build() -> URL {
+        addTokenAndVersion()
         let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: encodedString!)
         assert(url != nil, "URL is nil")
@@ -75,6 +78,13 @@ struct URLBuilder {
         urlString += key
         urlString += equalKey
         urlString += value
+    }
+    
+    private mutating func addTokenAndVersion() {
+        if host == .main, let authToken = UsersService.authToken()  {
+            add(accessToken: authToken.token)
+        }
+        add(APIVersion: VKAPIVersion)
     }
     
     private mutating func addAmpersantIfNotFirstParameter() {
