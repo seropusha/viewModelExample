@@ -16,9 +16,8 @@ struct ResponseHelper {
         case .success(let item):
             DispatchQueue.main.async { success(item) }
         case .failure(let error as NSError):
-            let rootVC = UIApplication.shared.keyWindow?.rootViewController
             DispatchQueue.main.async {
-                rootVC?.showAlert(title: "Error"+"\(error.code)", message: error.localizedDescription)
+                UIApplication.topViewController()?.showAlert(title: "Error"+"\(error.code)", message: error.localizedDescription)
             }
         default:
             break

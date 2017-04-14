@@ -10,4 +10,12 @@ import UIKit
 
 class DialogsViewController: BaseViewController {
     
+    let viewModel = DialogsViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.loadDialogs(offset: 0)
+    }
+    
 }

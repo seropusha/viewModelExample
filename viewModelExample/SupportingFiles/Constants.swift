@@ -8,7 +8,10 @@
 
 import Foundation
 
-let host = "https://api.vk.com/method"
+enum APIHost: String {
+    case main       = "https://api.vk.com/method"
+    case authorize  = "https://oauth.vk.com/authorize"
+}
 
 let VKAppID      = "5005882"
 let APIRedirectURI = "https://oauth.vk.com/blank.html"

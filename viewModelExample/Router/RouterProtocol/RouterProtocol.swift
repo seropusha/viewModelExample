@@ -11,7 +11,7 @@ import UIKit
 protocol RouterProtocol {
     
     weak var navigationController: UINavigationController? {get}
-    func setupRoot(viewController: UIViewController)
+    func setupRoot(navigationController: UINavigationController)
     func present(_ controller: UIViewController, animated: Bool, completion: (() -> ())?)
     func push(_ controller: UIViewController, animated: Bool)
     func popController(_ animated: Bool)
@@ -21,8 +21,8 @@ protocol RouterProtocol {
 
 extension RouterProtocol {
     
-    func setupRoot(viewController: UIViewController) {
-        UIApplication.shared.delegate?.window??.rootViewController = viewController
+    func setupRoot(navigationController: UINavigationController) {
+        LaunchClass.shared.window?.rootViewController = navigationController
     }
     
     func present(_ controller: UIViewController, animated: Bool = true, completion: (() -> ())? = nil) {

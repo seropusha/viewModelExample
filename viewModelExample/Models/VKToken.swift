@@ -46,7 +46,14 @@ extension VKToken: Meta {
     
     private static func authVKURLString() -> String {
         let perrmissionsResult = PermissionUser.scope(with: [.frinds, .photos, .audio, .video, .status, .notes, .messages, .offline, .email])
-        return "https://oauth.vk.com/authorize?client_id=\(VKAppID)&display=page&redirect_uri=\(APIRedirectURI)&scope=\(perrmissionsResult)&response_type=token&v=\(VKAPIVersion)"
+        var urlBuilder = URLBuilder(host: .authorize, method: .none)
+        urlBuilder.add(clientId: VKAppID)
+        urlBuilder.add(display: "page")
+        urlBuilder.add(redirectUri: APIRedirectURI)
+        urlBuilder.add(scope: perrmissionsResult)
+        urlBuilder.add(responseType: "token")
+        urlBuilder.add(APIVersion: VKAPIVersion)
+        return urlBuilder.build().absoluteString
     }
 }
 

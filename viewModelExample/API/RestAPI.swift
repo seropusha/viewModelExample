@@ -11,9 +11,11 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-private let trustPolicies: [String: ServerTrustPolicy] = [host:.disableEvaluation]
+private let trustPolicies: [String: ServerTrustPolicy] = [APIHost.main.rawValue:.disableEvaluation]
 
 struct RestAPI {
+    
+    static let shared = RestAPI()
     
     var sessionManager: Alamofire.SessionManager!
     

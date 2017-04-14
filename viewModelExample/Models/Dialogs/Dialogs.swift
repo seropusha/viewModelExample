@@ -23,7 +23,7 @@ extension Dialogs: Meta {
     static func urlString(with method:Method) -> String {
         switch method {
         case .POST:
-            return host+APIMethod.dialogs.rawValue
+            return "" //host+APIMethod.dialogs.rawValue
         default:
             assert(false, "diclare \(method.rawValue) in Dialogs")
             return ""

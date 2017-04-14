@@ -25,15 +25,18 @@ class LaunchClass {
     }
     
     func setupStartScreen() {
-        if UsersService.isHaveActiveToken() {
-            //setup screen
-            window?.rootViewController = UINavigationController()
-        }else{
+        setupDialogsVC()
+        if !UsersService.isHaveActiveToken() {
             setupLoginRouterAndPresentVC()
         }
     }
     
     //MARK: Private
+    
+    private func setupDialogsVC() {
+        let dialogsRouter = DialogsRouter(with: nil)
+        dialogsRouter.setupDialogsToRootVC()
+    }
     
     private func setupLoginRouterAndPresentVC() {
         let navigationController: UINavigationController?

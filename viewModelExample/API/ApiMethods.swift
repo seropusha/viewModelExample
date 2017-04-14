@@ -11,4 +11,5 @@ import Foundation
 public enum APIMethod: String {
     
     case dialogs  = "/messages.getDialogs"
+    case none     = ""
 }

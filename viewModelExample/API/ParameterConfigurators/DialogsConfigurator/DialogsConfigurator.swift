@@ -12,6 +12,14 @@ struct DialogsConfigurator: ParameterConfiguratorProtocol {
     //create properties
     func configureParameters(builder: ParametersBuilder) {
         //to do
+        
+        
+//        builder.add(offset: offset)
+//        builder.add(startMessageId: startMessageID)
+//        builder.add(previewlenght: previewLenght)
+//        builder.add(isUnread: isUnread)
+//        builder.add(isImportant: isImportant)
+//        builder.add(isUnanswered: isImportant)
     }
     
 }
