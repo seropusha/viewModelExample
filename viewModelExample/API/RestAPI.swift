@@ -13,6 +13,8 @@ import ObjectMapper
 
 private let trustPolicies: [String: ServerTrustPolicy] = [APIHost.main.rawValue:.disableEvaluation]
 
+private let DEBUG_APPEAR_RESPONSE = false
+
 struct RestAPI {
     
     static let shared = RestAPI()
@@ -36,6 +38,7 @@ struct RestAPI {
         let methodType = HTTPMethod(rawValue: method.rawValue)!
         sessionManager.request(path, method: methodType, parameters: parameters, encoding: encoding, headers: headers).validate().responseObject(queue: queue, keyPath: nil, context: nil) { (response: DataResponse<T>) in
             ResponseHelper.parseResponseGetInMain(response: response) { item in
+                if DEBUG_APPEAR_RESPONSE { print(String(data: response.data!, encoding: String.Encoding.utf8) ?? "empty response") }
                 success(item)
             }
         }
