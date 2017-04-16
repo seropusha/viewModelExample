@@ -43,7 +43,7 @@ class ErrorResult: Mappable {
 
 class BaseModel: Mappable {
     
-    var modelID = ""
+    var id      = 0
     var code    = 0
     var error   = ErrorResult()
     
@@ -54,13 +54,13 @@ class BaseModel: Mappable {
     }
     
     public func mapping(map: Map) {
-        modelID  <- map[JSONid]
+        id       <- map[JSONid]
         error    <- map[JSONError]
     }
 }
 
 extension BaseModel: Equatable {
     public static func ==(lhs: BaseModel, rhs: BaseModel) -> Bool {
-        return lhs.modelID == rhs.modelID
+        return lhs.id == rhs.id
     }
 }
