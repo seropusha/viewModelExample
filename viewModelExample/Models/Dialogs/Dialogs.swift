@@ -15,7 +15,7 @@ class Dialogs: BaseArrayModel {
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        dialogs  <- map[JSONItems]
+        dialogs  <- map[JSONResponse]
         print(dialogs.count)
     }
 }
