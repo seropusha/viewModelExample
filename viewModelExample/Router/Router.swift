@@ -17,9 +17,9 @@ struct Router: RouterProtocol {
     init() {}
     
     init!(navigationController: UINavigationController?) {
-        guard let NC = navigationController else { return nil }
-        self.navigationController = NC
-        login = LoginRouter(with: NC)
+        assert(navigationController != nil, "navigation controller is nil")
+        self.navigationController = navigationController!
+        login = LoginRouter(with: navigationController!)
     }
 }
 

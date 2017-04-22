@@ -9,38 +9,6 @@
 import Foundation
 import ObjectMapper
 
-class ErrorRequestParams: Mappable {
-    var key   = ""
-    var value = ""
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    func mapping(map: Map) {
-        key   <- map[JSONKey]
-        value <- map[JSONValue]
-    }
-}
-
-class ErrorResult: Mappable {
-    
-    var code    = 0  // info about error codes https://vk.com/dev/errors
-    var message = ""
-    var params = [ErrorRequestParams]()
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    func mapping(map: Map) {
-        code    <- map[JSONErrorCode]
-        message <- map[JSONErrorMessage]
-        params  <- map[JSONRequestParams]
-    }
-}
-
-
 class BaseModel: Mappable {
     
     var id      = 0

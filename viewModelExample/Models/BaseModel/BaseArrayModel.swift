@@ -11,10 +11,14 @@ import ObjectMapper
 
 class BaseArrayModel: BaseModel {
     
-    var countItems = [Any]()
+    var totalCountOfItems = 0
+    var pagination: PaginationModel!
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        countItems  <- map[JSONResponse+"."+JSONCount]
+        totalCountOfItems  <- map[JSONResponse+"."+JSONCount]
+        if pagination == nil {
+            pagination = PaginationModel(totalCount: totalCountOfItems)
+        }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161C59DB1EA8A6AE00295A1E /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C59DA1EA8A6AE00295A1E /* PaginationModel.swift */; };
+		161C59DD1EA8A72F00295A1E /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C59DC1EA8A72F00295A1E /* ResponseError.swift */; };
 		1633DD3A1E9E9D62009321D8 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD391E9E9D62009321D8 /* DialogsViewController.swift */; };
 		1633DD3C1E9E9D86009321D8 /* DialogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD3B1E9E9D86009321D8 /* DialogsViewModel.swift */; };
 		1633DD421E9E9EFD009321D8 /* BaseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */; };
@@ -74,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		01C23851785E2385C6951FC6 /* Pods-viewModelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viewModelExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-viewModelExample/Pods-viewModelExample.release.xcconfig"; sourceTree = "<group>"; };
+		161C59DA1EA8A6AE00295A1E /* PaginationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
+		161C59DC1EA8A72F00295A1E /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		1633DD391E9E9D62009321D8 /* DialogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
 		1633DD3B1E9E9D86009321D8 /* DialogsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsViewModel.swift; sourceTree = "<group>"; };
 		1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseArrayModel.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			children = (
 				1633DD401E9E9EFD009321D8 /* BaseArrayModel.swift */,
 				1633DD411E9E9EFD009321D8 /* BaseModel.swift */,
+				161C59DA1EA8A6AE00295A1E /* PaginationModel.swift */,
+				161C59DC1EA8A72F00295A1E /* ResponseError.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -807,6 +813,7 @@
 				1636D5471EA11F38007E9D6E /* URLBuilder.swift in Sources */,
 				1633DD3C1E9E9D86009321D8 /* DialogsViewModel.swift in Sources */,
 				1633DD6B1E9ECC29009321D8 /* DialogsConfigurator.swift in Sources */,
+				161C59DD1EA8A72F00295A1E /* ResponseError.swift in Sources */,
 				166D33ED1E9B9BBB008DBEEC /* UIApplication+TopViewController.swift in Sources */,
 				16E5238C1E92C8E7004B1447 /* APIOperation.swift in Sources */,
 				166D33E71E983936008DBEEC /* LoginRouter.swift in Sources */,
@@ -830,6 +837,7 @@
 				16C1EEAD1E9BB0DC00AD0672 /* URLRequest+AccessToken.swift in Sources */,
 				16FE8F791E79E88100393C23 /* Meta.swift in Sources */,
 				16FE8F7D1E80784D00393C23 /* ResponseHelper.swift in Sources */,
+				161C59DB1EA8A6AE00295A1E /* PaginationModel.swift in Sources */,
 				1633DD661E9ECB16009321D8 /* ParametersBuilder.swift in Sources */,
 				16FE8F7B1E80676D00393C23 /* URLPathHelper.swift in Sources */,
 				1633DD421E9E9EFD009321D8 /* BaseArrayModel.swift in Sources */,

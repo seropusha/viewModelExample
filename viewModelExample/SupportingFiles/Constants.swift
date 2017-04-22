@@ -17,6 +17,8 @@ let VKAppID      = "5005882"
 let APIRedirectURI = "https://oauth.vk.com/blank.html"
 let VKAPIVersion = "5.63"
 
+let itemsLimit = 20
+
 enum URLParameterKey: String {
     case additionalPath = "additionalUrlPath"
 }

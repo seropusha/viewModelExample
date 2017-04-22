@@ -16,7 +16,7 @@ internal enum Method: String {
 
 protocol APIOperation {
     func APICall<T>(method: Method, type:T.Type, params:[String:Any]?, headers:[String:String]?) where T:Mappable,T:Meta
-    func proccedResponseObject (response : Any)
+    func proccedResponseObject(response: Any)
 }
 
 extension APIOperation where Self : ViewModel {

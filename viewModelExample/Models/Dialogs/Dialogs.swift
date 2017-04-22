@@ -11,11 +11,12 @@ import ObjectMapper
 
 class Dialogs: BaseArrayModel {
     
-    var dialogs = [Dialog]()
+    var items = [Dialog]()
     
     public override func mapping(map: Map) {
         super.mapping(map: map)
-        dialogs  <- map[JSONResponse+"."+JSONItems]
+        items  <- map[JSONResponse+"."+JSONItems]
+        pagination.update(offset: items.count)
     }
 }
 
