@@ -8,7 +8,11 @@
 
 import Foundation
 
-class DialogsViewModel: ViewModel, APIOperation {
+protocol DialogsProvider {
+    func loadDialogs(offset: Int, startMessageID: Int, previewLenght: Int, isUnread: Bool, isImportant: Bool, isUnanswered: Bool)
+}
+
+class DialogsViewModel: ViewModel, APIOperation, DialogsProvider {
     
     func loadDialogs(offset: Int, startMessageID: Int = 0, previewLenght: Int = 40, isUnread: Bool = false, isImportant: Bool = false, isUnanswered: Bool = false) {
         var parameterBuilder = ParametersBuilder()
@@ -16,16 +20,22 @@ class DialogsViewModel: ViewModel, APIOperation {
         parameterBuilder.add(previewlenght: previewLenght)
         parameterBuilder.add(isUnread: isUnread)
         parameterBuilder.add(isImportant: isImportant)
-        parameterBuilder.add(isUnanswered: isImportant)
-        if startMessageID != 0 {
+        parameterBuilder.add(isUnanswered: isUnanswered)
+        if startMessageID > 0 {
             parameterBuilder.add(startMessageId: startMessageID)
         }
         APICall(method: .POST, type: Dialogs.self, params: parameterBuilder.build(), headers: nil)
     }
     
-    //MARK: Response
+    //MARK: - APIOperation proceed response
     
-    func proccedResponseObject(response : Any) {
-        //to do
+    func proccedResponseObject<T>(response: T) {
+        switch response {
+        case is Dialogs:
+            print("TO DO HANDLE RESPONSE \(response.self)")
+            break
+        default:
+            break
+        }
     }
 }

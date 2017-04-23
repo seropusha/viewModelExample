@@ -16,14 +16,14 @@ internal enum Method: String {
 
 protocol APIOperation {
     func APICall<T>(method: Method, type:T.Type, params:[String:Any]?, headers:[String:String]?) where T:Mappable,T:Meta
-    func proccedResponseObject(response: Any)
+    func proccedResponseObject<T>(response: T) where T:Mappable,T:Meta
 }
 
 extension APIOperation where Self : ViewModel {
     
     func APICall<T>(method: Method, type:T.Type, params:[String:Any]?, headers:[String:String]?) where T:Mappable,T:Meta {
         RestAPI.shared.callResponse(method: method, type: type, parameters: params, headers: headers) { genericObject in
-            //to do
+            self.proccedResponseObject(response: genericObject)
         }
     }
 }
